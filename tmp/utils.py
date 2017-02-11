@@ -8,7 +8,7 @@ Helper methods for running tests
 import os
 import shutil
 
-TEST_USER_DATA_PATH = 'test\\'
+TEST_USER_DATA_PATH = 'test/'
 
 def create_test_data():
     temp_path = '_TMP'

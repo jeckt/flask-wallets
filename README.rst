@@ -29,8 +29,8 @@ TODO
 ====
 
 #. (DONE) Create a git repo and load to GitHub.
-#. Restructure the app to use flask and database
-#. Create virtual environment to store dependencies
+#. (DONE) Restructure the app to use flask and database
+#. (DONE) Create virtual environment to store dependencies
 #. Create test database framework for unit testing
 
     #. Implement config.py to store database connections
