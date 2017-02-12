@@ -14,9 +14,12 @@ class UserTestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        u = models.User(nickname='steve', email='steve@email.com')
+        u = models.User(username='steve', email='steve@email.com')
+        u.hash_password('super-secret-password')
         db.session.add(u)
         db.session.commit()
+
+        self.user = models.User.query.get(1)
 
     @classmethod
     def tearDownClass(self):
@@ -25,13 +28,17 @@ class UserTestCase(unittest.TestCase):
 
         db.session.commit()
 
-    def test_user_has_nickname(self):
-        u = models.User.query.get(1)
-        assert u.nickname == 'steve'
+    def test_user_has_username(self):
+        assert self.user.username == 'steve'
 
     def test_user_has_email(self):
-        u = models.User.query.get(1)
-        assert u.email == 'steve@email.com'
+        assert self.user.email == 'steve@email.com'
+
+    def test_verify_password_successful(self):
+        assert self.user.verify_password('super-secret-password')
+
+    def test_verify_password_unsuccessful(self):
+        assert not self.user.verify_password('incorrect_password')
 
 if __name__ == '__main__':
     unittest.main()

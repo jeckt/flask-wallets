@@ -31,19 +31,18 @@ TODO
 #. (DONE) Create a git repo and load to GitHub.
 #. (DONE) Restructure the app to use flask and database
 #. (DONE) Create virtual environment to store dependencies
-#. Create test database framework for unit testing
+#. (DONE) Create test database framework for unit testing
 
     #. (DONE) Implement config.py to store database connections
     #. (DONE) Create unit test for creating a user
-    #. Build a small script to clean all database objects
+    #. (DONE) Build a small script to clean all database objects
 
 #. Set up simple views to run the web app for manual functional testing
 
-    #. Simple hello world display using templates and jinja2
-    #. Create sign up form
-    #. Create sign up view.
-    #. Create login form.
-    #. Create dashboard for logged in user
+    #. (DONE) Simple hello world display using templates and jinja2
+    #. (DONE) Create login/sign up form.
+    #. (DONE) Create login/sign up view.
+    #. Create a mock dashboard for logged in user
 
 #. Implement wallet model and unit tests around creation of wallets and accounts
 #. Implement functionality to fund wallets with accounts

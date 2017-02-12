@@ -1,0 +1,8 @@
+{% macro render_field(field, size) %}
+  {{ field(size=size, **kwargs)|safe }}
+  {% if field.errors %}
+    {% for error in field.errors %}
+    <br><span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+  {% endif %}
+{% endmacro %}
